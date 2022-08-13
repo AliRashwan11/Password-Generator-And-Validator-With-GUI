@@ -1,10 +1,22 @@
 import tkinter as tk
 from typing_extensions import IntVar
+import string
+import random as rand
 
 
 def main():
-   #----Calling The First GUI To Take User Input----
-   special_char,uppercase_char,number_char,dict_char,keyword_str,validate_str=GUI_display()
+    #----Calling The First GUI To Take User Input----
+    special_char,uppercase_char,number_char,dict_char,keyword_str,validate_str=GUI_display()
+    #    print(special_char)
+    #    print(uppercase_char)
+    #    print(number_char)
+    #    print(dict_char)
+    #    print(keyword_str)
+    #    print(validate_str)
+
+    Password_Generator(special_char,uppercase_char,number_char,dict_char,keyword_str)
+
+
 
 
 
@@ -13,11 +25,11 @@ def GUI_display():
     #----Some Functions That Help In Catching Dynamic Variables----
     def save_keyword():
         keyword_generate.set(Entry1.get())
-        password_validate.set("empty")
+        # password_validate.set("empty")
         main_window.destroy()
     def save_password():
         password_validate.set(Entry2.get())
-        keyword_generate.set("empty")
+        # keyword_generate.set("empty")
         main_window.destroy()
 
 
@@ -89,9 +101,31 @@ def GUI_display():
 
 
 
-def function_2():
-    ...
+def Password_Generator(specialChar,uppercaseChar,numberChar,dictChar,keyword):
     
+    #----Making A List Of All Lowercase Letters----
+    lower_case_letters=list(string.ascii_lowercase)
+    
+    #----Making A List For Each Of The User Specified Requirements----
+    special_letters=list(string.punctuation)
+    uppercase_letters=list(string.ascii_uppercase)
+    numbers=list(string.digits)
+
+    #----Making A Random List Of The Charachters----
+    final_list=[]
+
+    if specialChar==1:
+        final_list.append(rand.choice(special_letters))
+    if uppercaseChar==1:
+        final_list.append(rand.choice(uppercase_letters))
+    if numberChar==1:
+        final_list.append(rand.choice(numbers))
+    if keyword:
+        final_list.append(keyword)
+
+    print(final_list)
+        
+
 
 def function_n():
     ...
