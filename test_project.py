@@ -2,6 +2,8 @@ from project import *
 
 
 def test_Password_Validator():
+    #----Takes Properties Of A Password And Validates If It Is Meeting Those Requirements----
+
     assert Password_Validator(0,0,0,0,"easypassword")==1
     assert Password_Validator(1,0,0,0,"easypassword")==0
     assert Password_Validator(0,1,0,0,"easypassword")==0
@@ -16,6 +18,8 @@ def test_Password_Validator():
 
 
 def test_check_in_dictionary():
+    #----Takes A String And Checks If It Includes A Word That Is Found In The English Dictionary----
+
     assert check_in_dictionary("bnhhcatuu",1,["q","2"],1)==0
     assert check_in_dictionary("bnhhcatuu",0,["q","2"],1)==1
     assert check_in_dictionary("qwot_pp21",1,["q","2"],1)==1
@@ -30,6 +34,8 @@ def test_check_in_dictionary():
 
 
 def test_check_generated_password():
+    #----Checks Whether The Password Generated Is A Random Sequence From A Certain List Or Not----
+    
     assert check_generated_password("secure_password","password",["password","s","e","c","u","r","e","_"])==1
     assert check_generated_password("secure_password","password",["password","s","e","c","u","r","e"])==0
     assert check_generated_password("secure_password","password",["s","e","c","u","r","e"])==0
@@ -41,7 +47,7 @@ def test_check_generated_password():
     assert check_generated_password("BYEBYE_CS50P","CS50P",["B","Y","E","CS50P","B","Y","E","_"])==1
     assert check_generated_password("BYEBYE_CS50P","CS50P",["b","y","e","cs50p","b","y","e","_"])==0
 
-    
+
 
 #----GUI Functions Not Tested By PyTest----
 

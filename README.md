@@ -1,6 +1,12 @@
 # Password Generator And Validator With GUI
-User chooses certain level of security
+    #### Video Demo:  
+    #### Description:
+    User friendly password generator and validator.
 
-The program is able to generate a random password meeting these requirements or validate whether a certain password is meeting these requirements or not
+    Through an interactive GUI, the user chooses what level of security they want their password to be, then they can choose to either
 
-Still under developement
+    1- Generate a password meeting those requirements
+
+    2- Validate if a certain password is meeting those requirements or not
+
+    A strong security level can be achieved by making sure the password does not contain any actual words from the English dictionary, but instead the password is a random sequence of letters,number and special characters.

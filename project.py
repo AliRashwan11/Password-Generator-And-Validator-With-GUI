@@ -1,7 +1,4 @@
-from cgi import test
 import tkinter as tk
-from typing import final
-from typing_extensions import IntVar
 import string
 import random as rand
 
