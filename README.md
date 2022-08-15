@@ -12,4 +12,5 @@
 
 
     A strong security level can be achieved by making sure the password does not contain any actual words 
-    from the English dictionary, but instead the password is a random sequence of letters,number and special characters.
+    from the English dictionary, but instead the password is a random sequence of letters,number and special 
+    characters.
